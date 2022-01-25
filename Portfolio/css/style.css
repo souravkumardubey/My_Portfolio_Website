@@ -2,12 +2,14 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  
   padding: 0;
 }
 
+body {
+  /* background-color: lightcyan; */
+}
 
-li , button {
+.header li , button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -23,11 +25,25 @@ li , button {
   text-decoration: none;
 }
 
+
 .header {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  
+  /* background-color: lightblue; */
   align-items: center;
   padding: 5px 10%;
+}
+
+.header-dark {
+
+  background-color: rgba(0, 0, 0, whitesmoke) !important;
+
 }
 
 .logo {
@@ -87,37 +103,42 @@ span {
 }
 
 h1 {
-  margin-top: 50px;
+  /* margin-top: 100px; */
   line-height: 2;
   color: #1C6DD0;
-  margin-bottom: 0px;
-  font-family: 'Sacramento', cursive;
-  font-size: 5.625rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 5.5rem;
+}
+
+.profile {
+  height: 100vh;
+  align-items: center;
+  text-align: center;
 }
 
 .profile-picture {
   width: 250px;
   padding-bottom: 30px;
-  padding-top: 0px;
+  padding-top: 50px;
 }
 
 a {
   text-decoration: none;
   color: #119998;
   font-family: 'Montserrat', sans-serif;
-  margin: 10px 20px;
+  margin: 10px 10px;
 }
 
 p {
   line-height: 2;
 }
 
-hr {
+/* hr {
   border: dotted #EAF6F6 6px;
   border-bottom: none;
   width: 4%;
   margin: 100px auto;
-}
+}  */
 
 h2 {
   color: #66BFBF;
@@ -130,6 +151,7 @@ h2 {
 
 .sub {
   color: #1C6DD0;
+  padding-bottom: 0px;
 }
 
 h3 {
@@ -141,24 +163,13 @@ h3 {
 
 .main {
   background-size: cover;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1019%26quot%3b)' fill='none'%3e%3cpath d='M1512 560L0 560 L0 416.55Q0.61 345.16%2c 72 345.78Q119.87 273.64%2c 192 321.51Q258.44 267.94%2c 312 334.38Q353.38 303.75%2c 384 345.13Q433.56 274.69%2c 504 324.25Q563.13 311.38%2c 576 370.51Q627.63 302.13%2c 696 353.76Q746.97 332.73%2c 768 383.69Q798.33 342.02%2c 840 372.36Q871.51 283.87%2c 960 315.38Q1032.61 267.99%2c 1080 340.59Q1180.39 320.99%2c 1200 421.38Q1211.74 361.12%2c 1272 372.85Q1321.88 302.73%2c 1392 352.6Q1477.08 317.68%2c 1512 402.76z' fill='rgba(37%2c 70%2c 125%2c 1)'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 399.67Q76.06 355.74%2c 120 431.8Q146.62 386.42%2c 192 413.04Q248.79 397.83%2c 264 454.62Q325.91 444.53%2c 336 506.44Q362.41 460.85%2c 408 487.26Q428.01 435.27%2c 480 455.28Q488.02 391.3%2c 552 399.33Q605.85 381.17%2c 624 435.02Q687.88 426.9%2c 696 490.79Q725.24 448.03%2c 768 477.27Q822.21 411.48%2c 888 465.68Q914.01 371.69%2c 1008 397.71Q1050.58 368.28%2c 1080 410.86Q1153.72 364.59%2c 1200 438.31Q1252.09 370.4%2c 1320 422.49Q1382.58 413.06%2c 1392 475.64Q1395.15 406.79%2c 1464 409.95z' fill='rgba(53%2c 108%2c 177%2c 1)'%3e%3c/path%3e%3cpath d='M1488 560L0 560 L0 569.03Q27.3 476.33%2c 120 503.63Q144.26 455.89%2c 192 480.15Q234.31 450.45%2c 264 492.76Q346.52 455.28%2c 384 537.8Q459.86 493.66%2c 504 569.52Q509.22 502.74%2c 576 507.96Q624.47 436.43%2c 696 484.9Q755.18 472.08%2c 768 531.26Q826.2 517.46%2c 840 575.66Q857.66 473.32%2c 960 490.98Q1004.74 463.72%2c 1032 508.45Q1105.93 462.38%2c 1152 536.31Q1211.39 523.7%2c 1224 583.1Q1243.93 483.04%2c 1344 502.97Q1372.21 459.19%2c 1416 487.4Q1465.22 464.63%2c 1488 513.85z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1019'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='579' preserveAspectRatio='none' viewBox='0 0 1440 579'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3cpath d='M1536 579L0 579 L0 436Q-21.67 342.33%2c 72 320.66Q142.69 319.35%2c 144 390.04Q174.16 348.2%2c 216 378.35Q234.07 324.43%2c 288 342.5Q312.13 294.63%2c 360 318.75Q456.27 295.02%2c 480 391.3Q492.68 331.98%2c 552 344.66Q619.38 292.04%2c 672 359.42Q731.06 346.48%2c 744 405.54Q790.63 380.17%2c 816 426.79Q824.51 363.3%2c 888 371.81Q931.55 343.36%2c 960 386.9Q1004.58 311.48%2c 1080 356.06Q1124.58 328.63%2c 1152 373.21Q1167.84 317.05%2c 1224 332.89Q1266.08 302.97%2c 1296 345.04Q1398.95 328%2c 1416 430.95Q1419.03 313.98%2c 1536 317.01z' fill='rgba(37%2c 70%2c 125%2c 1)'%3e%3c/path%3e%3cpath d='M1536 579L0 579 L0 434.35Q48.47 410.82%2c 72 459.29Q160.15 427.44%2c 192 515.59Q231.96 435.55%2c 312 475.51Q378.43 421.94%2c 432 488.37Q442.2 426.57%2c 504 436.77Q526.08 386.85%2c 576 408.92Q616.09 377.01%2c 648 417.1Q728.21 377.31%2c 768 457.53Q832.1 449.63%2c 840 513.72Q890.25 443.97%2c 960 494.22Q991.09 405.31%2c 1080 436.4Q1100.56 384.96%2c 1152 405.52Q1225.43 406.95%2c 1224 480.38Q1289.3 425.68%2c 1344 490.97Q1386.78 461.75%2c 1416 504.52Q1429.6 398.12%2c 1536 411.71z' fill='rgba(53%2c 108%2c 177%2c 1)'%3e%3c/path%3e%3cpath d='M1536 579L0 579 L0 609.21Q23.67 512.88%2c 120 536.56Q193.72 490.28%2c 240 564Q250.66 502.66%2c 312 513.33Q356.94 486.27%2c 384 531.2Q471.73 498.93%2c 504 586.67Q554.83 517.5%2c 624 568.32Q681.34 553.66%2c 696 611.01Q729.21 524.22%2c 816 557.43Q861.82 531.25%2c 888 577.07Q914.73 483.8%2c 1008 510.52Q1062.94 445.46%2c 1128 500.4Q1194.12 494.52%2c 1200 560.64Q1244.68 533.32%2c 1272 578Q1313.81 547.81%2c 1344 589.61Q1365.15 538.76%2c 1416 559.91Q1466.71 490.62%2c 1536 541.32z' fill='rgba(138%2c 202%2c 220%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='579' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   position: relative;
   height: 100vh;
-  /* padding-top: 50px; */
+  padding-top: 7rem;
 }
 
 
-.top-cloud { 
-  position: absolute;
-  right: 300px;
-  top: 40px;
-}
-
-.bottom-cloud {
-  position: absolute;
-  left: 250px;
-  bottom: 300px;
-}
 
 .skill-row {
   width: 50%;
@@ -184,7 +195,7 @@ h3 {
 
 .bottom-container {
   background-color: #1C6DD0;
-  padding: 50px 0 20px;
+  padding: 20px 0 10px;
 }
 
 .footer-link:hover {
@@ -197,9 +208,14 @@ h3 {
   margin: auto;
 }
 
+.contact-me {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
 .contact-message {
   width: 40%;
-  margin: 40px auto 60px;
+  margin: 20px auto 40px;
 }
 
 .btn {
@@ -220,5 +236,10 @@ h3 {
 .copyright {
   color: #EAF6F6;
   font-size: 0.8rem;
-  padding: 20px 0px;
+  padding: 10px 0px;
+}
+
+
+span {
+  color: #1C6DD0 !important;
 }
